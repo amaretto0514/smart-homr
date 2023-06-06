@@ -1,0 +1,669 @@
+@import url("root.css");
+html {
+    font-size: 62.5%; /* 1 rem = 10px */ 
+}
+*, *:before, *:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: var(--fuente);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/*Globales*/
+
+
+
+/* HEADER*/
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 20px 80px;
+    height: 80px;
+    align-items: center;
+    
+    justify-content: space-around;
+    transition:  0.5s;
+    
+}
+
+header.down{
+    background: var(--color1);
+    box-shadow:  1px 9px 20px -5px rgba(0, 0, 0, 0.59);
+    padding: 15px 80px; 
+}
+
+header .logo{
+    position: relative;
+    color: var(--color3);
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 0.7ms;
+    text-decoration: none;
+}
+
+header .brand img{
+    height: 60px;
+    width: 230px;
+    transition: 0.3s;
+
+}
+
+header .brand img:hover{
+    background-color:var(--color4);
+    border-radius: 30px;
+}
+
+header .menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+
+header .menu ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .menu ul li{
+    list-style: none;
+}
+
+header .menu a{
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 20px;
+    margin: 0 30px;
+    text-decoration: none;
+    color: var(--color3);
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 7px 12px;
+    transition-property: color, background;
+}
+
+header .menu a:hover{
+    color: var(--color2);
+    background-color: var(--color4);
+
+}
+
+header .btn{
+    color: var(--color3);
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*Main*/
+.section-main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("/img/zyro-image.png");
+    background-position: center center;
+    background-size: cover;
+    background-position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+.section-main h1{
+    font-family: var(--fuente);
+    font-size: 4em;
+    margin-top: 300px;
+    margin-left: -7%;
+    background-color: rgba(0, 0, 0, 0.449);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: var(--blanco);
+    text-transform: uppercase;
+
+}
+
+/*Services*/
+ .services{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    padding: 10px auto;
+    padding-top: 20px;
+ }
+
+ .services .membrete{
+    margin: 15px;
+ }
+
+ .services .membrete p{
+    letter-spacing: 3px;
+    color: var(--color3);
+ }
+
+ .services .membrete h1{
+    text-transform: uppercase;
+ }
+
+ .services .membrete i{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: var(--color3);
+ }
+
+ .services .membrete h4{
+    text-transform: uppercase;
+ }
+
+ .services .box{
+    opacity: 0;
+    display: flex;
+    float: left;
+    justify-content: center;
+    margin-left: 1.8%;
+    margin-right: 0.7%;
+    padding: 0px;
+    width: 450px;
+    height: 375px;
+ }
+
+ .services .box:last-child {
+    margin-left: 34.7%;
+}
+
+
+ .services .box a{
+    text-decoration: none;
+    font-style: none;
+ }
+
+ .services .box img{
+    width: 450px;
+    height: 295px;
+ }
+
+ .services .box h2{
+    color: var(--color5);
+    text-decoration: none;
+    text-transform: uppercase;
+ }
+
+ #domotica.visible{
+    opacity: 1;
+    animation: fadeInLeft;
+    animation-duration: 1s;
+ }
+
+ #iluminacion.visible{
+    opacity: 1;
+    animation: fadeInUp;
+    animation-duration: 1s;
+ }
+
+ #audio_smart.visible{
+    opacity: 1;
+    animation: fadeInRight;
+    animation-duration: 1s;
+ }
+
+ #cine_casa.visible{
+    opacity: 1;
+    animation: fadeInLeft;
+    animation-duration: 1s;
+ }
+
+ #audio_pro.visible{
+    opacity: 1;
+    animation: fadeInUp;
+    animation-duration: 1s;
+ }
+
+ #sis_empresa.visible{
+    opacity: 1;
+    animation: fadeInRight;
+    animation-duration: 1s;
+ }
+
+ #home_network.visible{
+    opacity: 1;
+    animation: fadeInUp;
+    animation-duration: 1s;
+ }
+
+
+
+
+
+/*SECTION FORM*/
+
+.is-invalid{
+    color: red;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.section-two{
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    box-shadow:  1px 9px 20px 10px rgba(0, 0, 0, 0.59);  
+    background-image: url("/img/pattern3.png");
+}
+
+.section-two .contactForm{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    width: 90%;
+    height: 90%;
+    background-color: var(--color4);
+    box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.59);
+    border-radius: 30px;
+}
+
+.form-termsAndCond [type="checkbox"]{
+    display: none;
+}
+.form-termsAndCond [type="checkbox"]:checked + label::before{
+    background-color: var(--color5);
+    transition: 0.5s;
+    transform: rotate(180deg);
+}
+.form-termsAndCond{
+    margin: 20px;
+    margin-top: 0px;
+    margin-left: 15px;
+    font-size: 12px;
+    position: relative;
+}
+.form-termsAndCond label::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--color5);
+    position: absolute;
+    top: 4px;
+    left: -14px;
+}
+
+.section-two .contactForm .form{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 85%;
+    margin-left: 30px;
+}
+
+.section-two .contactForm .form form{
+    width: 100%;
+}
+
+.section-two .contactForm .form .texto h2{
+    color: var(--color1);
+    font-size: 2em;
+    margin-bottom: 10px;
+
+}
+
+.section-two .contactForm .form .texto p{
+    color: var(--color2);
+    text-align: justify;
+    -webkit-text-stroke: 0.6px var(--color5);
+    font-size: 1.5;
+    margin-bottom: 20px;
+}
+
+.section-two .contactForm .form form .inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.section-two .contactForm .form form .inputBox label{
+    color: var(--color1);
+    font-weight: 700;
+}
+
+.section-two .contactForm .form form .inputBox input[type="text"],
+.section-two .contactForm .form form .inputBox input[type="email"],
+.section-two .contactForm .form form .inputBox input[type="tel"],
+.section-two .contactForm .form form .inputBox textarea{
+    border: none;
+    background: #6a665a;
+    padding: 10px;
+    border-radius: 15px;
+    color: var(--color1);
+}
+
+.section-two .contactForm .form form .inputBox input[type="text"]:focus,
+.section-two .contactForm .form form .inputBox input[type="email"]:focus,
+.section-two .contactForm .form form .inputBox input[type="tel"]:focus,
+.section-two .contactForm .form form .inputBox textarea:focus{
+    outline: 2px solid var(--color1);
+}
+
+.section-two .contactForm .form form  input[type="submit"]{
+    background: var(--color1);
+    color: var(--color4);
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    padding: 10px;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    box-shadow:  1px 9px 20px -5px rgba(0, 0, 0, 0.59);
+    transition: 0.3s;
+}
+
+.section-two .contactForm .form form  input[type="submit"]:hover{
+    background-color: var(--blanco);
+    color: var(--color2);
+}
+
+.section-two .contactForm .imgBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+    width: 500px;
+    height: 400px;
+}
+
+.section-two .contactForm .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-two .contactForm .textBox {
+   
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    display:flex;
+}
+
+.section-two .contactForm .textBox .infoContact {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px; 
+    margin-bottom: 10px;   
+}
+
+.section-two .contactForm .textBox .infoContact svg{
+    font-size: 2em;
+    margin-right: 10px;
+    color: var(--color1);
+
+}
+
+.section-two .contactForm .textBox .infoContact p {
+    color: var(--color1);
+}
+
+/*Footer*/
+
+.footer{
+    width: 100%;
+    background-color: var(--color1);
+}
+
+.footer .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.footer .grupo-1 .box h5{
+    color: var(--color4);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.footer .grupo-1 .box p{
+    margin-bottom: 10px;
+    color: var(--color2);
+}
+
+.footer .grupo-1 .contacto{
+    color: var(--color3);
+    display: inline-block;
+}
+
+.footer .grupo-1 .contacto ul #icono{
+    display: flex;
+    margin-top: 1em;
+    list-style: none;
+    margin-bottom: 1em;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .grupo-1 .contacto ul #icono li{
+    text-decoration: none;
+}
+
+.footer .grupo-1 .enlaces {
+    margin-top: 1em;
+    list-style: none;
+    margin-bottom: 1em;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.footer .grupo-1 .enlaces li{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+}
+
+.footer .grupo-1 .enlaces a{
+    text-decoration: none;
+    color: var(--color2);
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+.footer .grupo-1 .box .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: var(--color3);
+    margin-right: 10px;
+    text-align: center;
+    font-size: 2em;
+    transition: all 300ms ease;
+}
+
+.footer .grupo-1 .box .red-social a:hover{
+    color: var(--color2);
+}
+
+.footer .grupo-2{
+    background-color: var(--color5);
+    padding: 15px 10px;
+    text-align: center;
+    color: var(--color4);
+}
+
+.footer .grupo-2 small{
+    font-size: 12px;
+}
+
+.footer .grupo-2 .autor{
+    font-size: 10px;
+    text-align: right;
+}
+
+/*Breakpoints*/
+
+/*Pantallas largas*/
+
+@media screen and (max-width: 1200px) {
+
+header, header.down{
+    padding: 20px 40px;
+}
+
+header .btn{
+    display: block;
+}
+
+header .menu{
+    position: fixed;
+    background-color: var(--color1);
+    min-width: 33px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    transition: 0.5s;
+    transition-property: right;
+}
+
+header .menu ul{
+    flex-direction: column;
+}
+
+header .menu.activate{
+    right: 0;
+}
+
+header .menu .close-btn{
+   position: absolute;
+   top:0;
+   left: 0;
+   margin: 25px; 
+}
+
+header .menu a{
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+}
+
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+  .section-two{
+    height: 150vh
+  }
+  
+  .section-main{
+    width: 100%;
+    height: 50vh
+  }
+
+  .section-main h1{
+    margin-left: -80px;
+    font-size: 1em;
+  }
+
+  .services .box{
+    width: 300px;
+    height: 325px;
+    margin-left: 5%;
+
+  }
+
+  .services .box img{
+    width: 300px;
+    height: 245px;
+    margin-left: 5%;
+  }
+
+  .services .box:last-child {
+    margin-left: 5%;
+  }
+
+  .section-two .contactForm{
+    width: 70%;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
+}
+.section-two .contactForm .info{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+  .footer .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+}}
+
+
+
+
+/*Lapotops y tablets*/
+
+@media only screen and (max-width:768px){
+    .section-two .contactForm .info{
+        height: 300px;
+        padding: 20px;
+    }
+    .section-two .contactForm .info .imgBox{
+        display: none;
+    }
+}
+/*Celulares*/
+
+@media (max-width:600px){
+    .section-main{
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .section-two .contactForm {
+        margin-left: 0px;
+        width: 100%;
+    }
+}
