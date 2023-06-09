@@ -140,7 +140,9 @@ header .btn{
 }
 
 
+
 .main .gallery .box{
+    align-items: center;
     margin: 10px 20px;
     float: left;
     width: 350px;
@@ -173,7 +175,7 @@ a{
 .section-two{
     position: relative;
     width: 100%;
-    height: 110vh;
+    height: 120vh;
     display: grid;
     place-items: center;
     padding: 20px;
@@ -493,14 +495,13 @@ a{
       nav, article {
         width: 100%;
         height: auto;}
-      }
-    
-      .section-two{
-        height: 150vh
-      }
       
+    .section-two{
+        height: 100vh
+        }
+        
     
-      .section-two .contactForm{
+        .section-two .contactForm{
         width: 70%;
         padding: 0;
         margin-top: 10px;
@@ -508,15 +509,17 @@ a{
         grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
     }
     .section-two .contactForm .info{
-        margin-top: 5px;
-        margin-bottom: 5px;
+        display: none;
     }
-      .footer .grupo-1{
+        .footer .grupo-1{
         width: 90%;
         grid-template-columns: repeat(1,1fr);
         grid-gap: 30px;
         padding: 35px 0px;
     }
+    }
+    
+      
     
     
     
@@ -524,12 +527,12 @@ a{
     /*Lapotops y tablets*/
     
     @media only screen and (max-width:768px){
-        .section-two .contactForm .info{
-            height: 100px;
+        .section-two .contactForm {
+            height: 85vh;
             margin-left: 50px;
             
         }
-        .section-two .contactForm .info .imgBox{
+        .section-two .contactForm .info {
             display: none;
         }
     }
@@ -544,9 +547,16 @@ a{
         .titulo h1{
             padding-top: 25%;
         }
-    
+        
+        .section-two{
+            height: 140vh;
+        }
         .section-two .contactForm {
+            height: 120vh;
             margin-left: 0px;
             width: 100%;
+        }
+        .section-two .contactForm .info {
+            display: none;
         }
     }

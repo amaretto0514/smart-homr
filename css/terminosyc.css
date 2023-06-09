@@ -18,7 +18,6 @@ body {
 
 
 
-
 /* HEADER*/
 header {
     z-index: 999;
@@ -110,6 +109,20 @@ header .btn{
     display: none;
 }
 
+
+/*Main*/
+.TyC{
+    margin:5% 5%;
+}
+.TyC h2{
+    margin-top: 1em;
+}
+.TyC p{
+    text-align: justify;
+    margin-top: 0.5em;
+}
+
+
 /*SECTION FORM*/
 
 .is-invalid{
@@ -121,7 +134,7 @@ header .btn{
 .section-two{
     position: relative;
     width: 100%;
-    height: 120vh;
+    height: 110vh;
     display: grid;
     place-items: center;
     padding: 20px;
@@ -391,8 +404,8 @@ header .btn{
 }
 
 .footer .grupo-2 .autor{
-    text-align: right;
     font-size: 10px;
+    text-align: right;
 }
 
 /*Breakpoints*/
@@ -444,10 +457,40 @@ header .menu a{
 
   nav, article {
     width: 100%;
-    height: auto;}
+    height: auto;
+  }
+  .section-two{
+    height: 150vh
+  }
+  
+  .section-main{
+    width: 100%;
+    height: 50vh
+  }
 
+  .section-main h1{
+    margin-left: -80px;
+    font-size: 1em;
+  }
 
-.section-two .contactForm{
+  .services .box{
+    width: 300px;
+    height: 325px;
+    margin-left: 5%;
+
+  }
+
+  .services .box img{
+    width: 300px;
+    height: 245px;
+    margin-left: 5%;
+  }
+
+  .services .box:last-child {
+    margin-left: 5%;
+  }
+
+  .section-two .contactForm{
     width: 70%;
     padding: 0;
     margin-top: 10px;
@@ -458,19 +501,12 @@ header .menu a{
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.footer .grupo-1{
+  .footer .grupo-1{
     width: 90%;
     grid-template-columns: repeat(1,1fr);
     grid-gap: 30px;
     padding: 35px 0px;
-}
-
-}
-
-
-  
-
- 
+}}
 
 
 
@@ -479,9 +515,8 @@ header .menu a{
 
 @media only screen and (max-width:768px){
     .section-two .contactForm .info{
-        height: 100px;
-        margin-left: 50px;
-        
+        height: 300px;
+        padding: 20px;
     }
     .section-two .contactForm .info .imgBox{
         display: none;

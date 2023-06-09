@@ -208,14 +208,10 @@ header .btn{
     background-position: center center;
 }
 
-#domotica-integracion {
-    position: absolute;
-    right: 0;
-}
 
 #iluminacion-proyectos{
     text-align: left;
-    background-image:  url("/img/servivicios-img/recortes1.png");
+    background-image:  url("/img/Proyectos/iluminacion/1BA27650-B7D5-40BC-BBC0-09F2FBB385E4.png");
     background-position: center center;
 
 }
@@ -271,17 +267,21 @@ header .btn{
 
 /*SECTION FORM*/
 
+.is-invalid{
+    color: red;
+    font-size: 10px;
+    font-weight: bold;
+}
+
 .section-two{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     display: grid;
     place-items: center;
     padding: 20px;
-    box-shadow:  1px 9px 20px -5px rgba(0, 0, 0, 0.59);  
-    /*background: linear-gradient(to top left, var(--color4), var(--color5));*/
+    box-shadow:  1px 9px 20px 10px rgba(0, 0, 0, 0.59);  
     background-image: url("/img/pattern3.png");
-    
 }
 
 .section-two .contactForm{
@@ -295,6 +295,31 @@ header .btn{
     background-color: var(--color4);
     box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.59);
     border-radius: 30px;
+}
+
+.form-termsAndCond [type="checkbox"]{
+    display: none;
+}
+.form-termsAndCond [type="checkbox"]:checked + label::before{
+    background-color: var(--color5);
+    transition: 0.5s;
+    transform: rotate(180deg);
+}
+.form-termsAndCond{
+    margin: 20px;
+    margin-top: 0px;
+    margin-left: 15px;
+    font-size: 12px;
+    position: relative;
+}
+.form-termsAndCond label::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--color5);
+    position: absolute;
+    top: 4px;
+    left: -14px;
 }
 
 .section-two .contactForm .form{
@@ -319,7 +344,9 @@ header .btn{
 }
 
 .section-two .contactForm .form .texto p{
-    color: #0b426c;
+    color: var(--color2);
+    text-align: justify;
+    -webkit-text-stroke: 0.6px var(--color5);
     font-size: 1.5;
     margin-bottom: 20px;
 }
@@ -337,6 +364,7 @@ header .btn{
 
 .section-two .contactForm .form form .inputBox input[type="text"],
 .section-two .contactForm .form form .inputBox input[type="email"],
+.section-two .contactForm .form form .inputBox input[type="tel"],
 .section-two .contactForm .form form .inputBox textarea{
     border: none;
     background: #6a665a;
@@ -347,6 +375,7 @@ header .btn{
 
 .section-two .contactForm .form form .inputBox input[type="text"]:focus,
 .section-two .contactForm .form form .inputBox input[type="email"]:focus,
+.section-two .contactForm .form form .inputBox input[type="tel"]:focus,
 .section-two .contactForm .form form .inputBox textarea:focus{
     outline: 2px solid var(--color1);
 }
@@ -378,8 +407,8 @@ header .btn{
     flex-direction: column;
 
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    height: 400px;
 }
 
 .section-two .contactForm .imgBox img{
@@ -569,14 +598,13 @@ header .btn{
       nav, article {
         width: 100%;
         height: auto;}
-      }
     
-      .section-two{
+    .section-two{
         height: 150vh
-      }
-      
+        }
+        
     
-      .section-two .contactForm{
+        .section-two .contactForm{
         width: 70%;
         padding: 0;
         margin-top: 10px;
@@ -587,13 +615,17 @@ header .btn{
         margin-top: 5px;
         margin-bottom: 5px;
     }
-      .footer .grupo-1{
+        .footer .grupo-1{
         width: 90%;
         grid-template-columns: repeat(1,1fr);
         grid-gap: 30px;
         padding: 35px 0px;
     }
+          
     
+    }
+    
+      
     
     
     
@@ -608,7 +640,7 @@ header .btn{
         }
 
         .service{
-            70vh;
+            height: 80vh;
         }
         .section-two .contactForm .info .imgBox{
             display: none;
