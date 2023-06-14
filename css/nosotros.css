@@ -157,7 +157,7 @@ header .btn{
 .section-main .subtitulo h1{
     text-align: center;
     font-size: 8em;
-    -webkit-text-stroke: 0.2px var(--color2);
+    
     color: #f4f4f4;
     text-shadow: 2px 2px 4px black; 
     font-family: var(--fuente);
@@ -173,7 +173,7 @@ header .btn{
 .section-main .subtitulo h3{
     text-align: center;
     font-size: 2em;
-    -webkit-text-stroke: 0.2px var(--color2);
+   
     color: #f4f4f4;
     text-shadow: 2px 2px 4px black; 
 }
@@ -192,8 +192,11 @@ header .btn{
     align-items: center;
     padding: 2%;
     justify-content: center;
-    background-image: url("/img/pattern.png");
-    height: 150vh;
+    background-image: url("/img/servivicios-img/3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+    height: 100vh;
     width: 100%;
     overflow: hidden;
     z-index: -3;
@@ -217,7 +220,7 @@ header .btn{
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-    background: linear-gradient(to top left, var(--color4), var(--color5));
+    background: linear-gradient(to top left);
     width: 400px;
     height: 400px;
     padding-top: 12%;
@@ -404,31 +407,45 @@ header .btn{
     object-fit: cover;
 }
 
-.section-two .contactForm .textBox {
-   
+.section-two .contactForm .info {
+    margin-top: 15%;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    display:flex;
 }
 
-.section-two .contactForm .textBox .infoContact {
-    display: flex;
+.section-two .contactForm .info .llamanos {
     justify-content: center;
     align-items: flex-start;
-    margin-top: 10px; 
-    margin-bottom: 10px;   
+    margin-top: 5%; 
+    margin-bottom: 5%;   
 }
 
-.section-two .contactForm .textBox .infoContact svg{
-    font-size: 2em;
+.section-two .contactForm .info .numero{
+    font-size: 5em;
+    font-weight: bold;
+    color: var(--color3);
+    text-shadow:2px 2px 4px var(--color5)
+    
+}
+
+.section-two .contactForm .info .social-media{
+    font-size: 5em;
+    float: left;
     margin-right: 10px;
-    color: var(--color1);
-
+    color: var(--color3);
+    text-shadow: -2px -2px 4px var(--color5);
+    
 }
 
-.section-two .contactForm .textBox .infoContact p {
-    color: var(--color1);
+.section-two .contactForm .info .social-media a{
+    color: inherit;
+    
+    transition: scale(5%) 2s
+    
+}
+
+.section-two .contactForm .info .social-media a:hover{
+    color: var(--color2);
+
 }
 
 /*Footer*/
@@ -614,26 +631,27 @@ header .btn{
       .box-container:last-child{
         display: none
       }
-      .section-two{
-        height: 75vh
-      }
-          
+        
       .section-two .contactForm{
-        align-items: center;
-        width: 80%;
-        height: 80%;
+        width: 85%;
         padding: 0;
         margin-top: 10px;
         margin-bottom: 10px;
         grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
     }
-    .section-two .contactForm .info{
-        margin-top: 5px;
-        margin-bottom: 5px;
+    
+    .section-two .contactForm .form{
+        margin-top: -15%;
     }
-
-    .section-two .contactForm .info .imgBox{
-        width: 100%;
+    .section-two .contactForm .info{
+        margin-top: 20%;
+        
+    }
+    
+    .section-two .contactForm .info .numero{
+        margin-top: 0.2em;
+        margin-bottom: 0.5em;
+        font-size: 3.8em;
     }
       .footer .grupo-1{
         width: 90%;
@@ -689,18 +707,15 @@ header .btn{
           .box-container:last-child{
             display: none
           }
-          .section-two {
-            height: 80vh;
-          }
-          .section-two .contactForm {
-            height: 70vh;
-          }
-        .section-two .contactForm .info{
-            height: 150px;
-            padding: 20px;
+          .section-two .contactForm .info{
+            margin-top: -10%;
+            height: 20vh;
+            margin-left: 50px;
+            
         }
-        .section-two .contactForm .info .imgBox{
-            display: none;
+    
+        .section-two .contactForm .info .numero{
+            font-size: 4em;
         }
     }
     /*Celulares*/
@@ -750,12 +765,28 @@ header .btn{
             font-size: 2em;
           }
           .section-two{
-            height: 150vh;
-          }
+            height: 180vh;
+        }
     
         .section-two .contactForm {
             margin-left: 0px;
-            height: 90%;
             width: 100%;
+        }
+    
+        .section-two .contactForm .form{
+            margin-top: -20%;
+        }
+    
+        .section-two .contactForm .info{
+            margin-top: -25%;
+        }
+    
+        .section-two .contactForm .info .numero{
+            font-size: 2em;
+            margin-bottom: 0.5em;
+    
+        }
+        .section-two .contactForm .info .social-media{
+            font-size: 2.5em;
         }
     }

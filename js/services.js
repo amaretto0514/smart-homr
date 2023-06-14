@@ -8,7 +8,7 @@ window.addEventListener("scroll",function(){
     if(window.scrollY>0){
         logo.setAttribute('src','/img/logo-1.png')
     }else{
-        logo.setAttribute('src','/img/logo-alternativo-1.png')
+        logo.setAttribute('src','/img/logo-1.png')
     }
 });
 
@@ -23,6 +23,39 @@ menuBtn.addEventListener("click",() =>{
 closeBtn.addEventListener("click",() =>{
     menu.classList.remove('activate');
 })
+
+// animacion de servicios
+
+const domotica = document.getElementById("domotica");
+const iluminacion = document.getElementById("iluminacion");
+const audio_smart = document.getElementById("audio_smart");
+const cine_casa = document.getElementById("cine_casa");
+const audio_pro = document.getElementById("audio_pro");
+const sis_empresa = document.getElementById("sis_empresa");
+const home_network = document.getElementById("home_network");
+
+const cargarImagen =(entradas, observador) => {
+    entradas.forEach((entrada)=>{
+        if(entrada.isIntersecting){
+            entrada.target.classList.add('visible')
+        }
+    })
+}
+
+const observador = new IntersectionObserver (cargarImagen, {
+    root: null,
+    rootMargin: '0px 0px 0px 0px',
+    threshold: 1.0
+})
+
+observador.observe(domotica);
+observador.observe(iluminacion);
+observador.observe(audio_smart);
+observador.observe(cine_casa);
+observador.observe(audio_pro);
+observador.observe(sis_empresa);
+observador.observe(home_network);
+
 
 //validacion de formulario
 

@@ -245,52 +245,51 @@ header .btn{
     color: var(--color2);
 }
 
-.section-two .contactForm .imgBox{
-    display: flex;
+
+
+.section-two .contactForm .info {
+    margin-top: 15%;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    position: relative;
-    width: 500px;
-    height: 400px;
 }
 
-.section-two .contactForm .imgBox img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.section-two .contactForm .textBox {
-   
+.section-two .contactForm .info .llamanos {
     justify-content: center;
     align-items: flex-start;
-    flex-direction: column;
-    display:flex;
+    margin-top: 5%; 
+    margin-bottom: 5%;   
 }
 
-.section-two .contactForm .textBox .infoContact {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 10px; 
-    margin-bottom: 10px;   
+.section-two .contactForm .info .numero{
+    font-size: 5em;
+    font-weight: bold;
+    color: var(--color3);
+    text-shadow:2px 2px 4px var(--color5)
+    
 }
 
-.section-two .contactForm .textBox .infoContact svg{
-    font-size: 2em;
+.section-two .contactForm .info .social-media{
+    font-size: 5em;
+    float: left;
     margin-right: 10px;
-    color: var(--color1);
-
+    color: var(--color3);
+    text-shadow: -2px -2px 4px var(--color5);
+    
 }
 
-.section-two .contactForm .textBox .infoContact p {
-    color: var(--color1);
+.section-two .contactForm .info .social-media a{
+    color: inherit;
+    
+    transition: scale(5%) 2s
+    
 }
+
+.section-two .contactForm .info .social-media a:hover{
+    color: var(--color2);
+    ;
+}
+
+
+
 
 /*Footer*/
 
@@ -392,7 +391,6 @@ header .btn{
 
 .footer .grupo-2 .autor{
     text-align: right;
-    font-size: 10px;
 }
 
 /*Breakpoints*/
@@ -448,15 +446,25 @@ header .menu a{
 
 
 .section-two .contactForm{
-    width: 70%;
+    width: 85%;
     padding: 0;
     margin-top: 10px;
     margin-bottom: 10px;
     grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
 }
+
+.section-two .contactForm .form{
+    margin-top: -15%;
+}
 .section-two .contactForm .info{
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 20%;
+    
+}
+
+.section-two .contactForm .info .numero{
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+    font-size: 3.8em;
 }
 .footer .grupo-1{
     width: 90%;
@@ -468,23 +476,18 @@ header .menu a{
 }
 
 
-  
-
- 
-
-
-
-
 /*Lapotops y tablets*/
 
 @media only screen and (max-width:768px){
     .section-two .contactForm .info{
-        height: 100px;
+        margin-top: -10%;
+        height: 20vh;
         margin-left: 50px;
         
     }
-    .section-two .contactForm .info .imgBox{
-        display: none;
+
+    .section-two .contactForm .info .numero{
+        font-size: 4em;
     }
 }
 /*Celulares*/
@@ -495,8 +498,35 @@ header .menu a{
         line-height: 60px;
     }
 
+    .section-two{
+        height: 180vh;
+    }
+
     .section-two .contactForm {
         margin-left: 0px;
         width: 100%;
+    }
+
+    .section-two .contactForm .form{
+        margin-top: -20%;
+    }
+
+    .section-two .contactForm .info{
+        margin-top: -25%;
+    }
+
+    .section-two .contactForm .info .numero{
+        font-size: 2em;
+        margin-bottom: 0.5em;
+
+    }
+    .section-two .contactForm .info .social-media{
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width:390px){
+    .section-two .contactForm{
+        height: 150vh;
     }
 }

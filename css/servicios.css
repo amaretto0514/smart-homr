@@ -139,7 +139,10 @@ header .btn{
 /*Section main*/
 
 .titulo{
-    background-image: url("/img/como-instalar-un-equipo-de-sonido-profesional.jpg");
+    background-image: url("/img/mejores-fondos-de-pantalla.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 20vh;
     justify-content: right;
@@ -163,10 +166,15 @@ header .btn{
     padding-top: 10%;
 }
 
+
+
+
 .service h2{
     color: var(--blanco);
+    text-shadow:2px 2px 4px var(--color5);
     text-transform: uppercase;
-    -webkit-text-stroke: 1px var(--color2);
+    font-weight: bold;
+    
     font-size: 2em;
 }
 
@@ -202,62 +210,67 @@ header .btn{
     color: var(--color5);
 }
 
-#domotica-integracion{
+
+
+
+#domotica{
+    
     text-align: left;
     background-image:  url("/img/servivicios-img/domotica.png");
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-
-#iluminacion-proyectos{
+#iluminacion{
     text-align: left;
     background-image:  url("/img/Proyectos/iluminacion/1BA27650-B7D5-40BC-BBC0-09F2FBB385E4.png");
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
-
-#sistema-audio-smart{
-    text-align: left;
-    background-image:  url("/img/servivicios-img/recortes1.png");
-    background-position: center center;
-}
-
-
-#sistema-audio-smart{
+#audio_smart{
     text-align: left;
     background-image:  url("/img/servivicios-img/sistema\ de\ audio\ smart.webp");
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
-#cine-en-casa{
+#cine_casa{
     text-align: left;
     background-image:  url("/img/servivicios-img/cine-en-casa-pantalla-gigante.jpg");
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#sistema-audio-pro{
+#audio_pro{
     text-align: left ;
     background-image:  url("/img/servivicios-img/sistema\ de\ audio\ pro.jpg");
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#sistema-audio-pro p#right{
-    position: absolute;
-    right: 0;
-}
 
-#sistemas-para-empresa{
+#sis_empresa{
     text-align: left;
     background-image:  url("/img/servivicios-img/sistemas\ para\ tu\ empresa.jpg");
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#home-network{
+#home_network{
     text-align: left;
     background-image:  url("/img/servivicios-img/home-network.webp");
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #home-network p#right{
@@ -420,31 +433,45 @@ header .btn{
     object-fit: cover;
 }
 
-.section-two .contactForm .textBox {
-   
+.section-two .contactForm .info {
+    margin-top: 15%;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    display:flex;
 }
 
-.section-two .contactForm .textBox .infoContact {
-    display: flex;
+.section-two .contactForm .info .llamanos {
     justify-content: center;
     align-items: flex-start;
-    margin-top: 10px; 
-    margin-bottom: 10px;   
+    margin-top: 5%; 
+    margin-bottom: 5%;   
 }
 
-.section-two .contactForm .textBox .infoContact svg{
-    font-size: 2em;
+.section-two .contactForm .info .numero{
+    font-size: 5em;
+    font-weight: bold;
+    color: var(--color3);
+    text-shadow:2px 2px 4px var(--color5)
+    
+}
+
+.section-two .contactForm .info .social-media{
+    font-size: 5em;
+    float: left;
     margin-right: 10px;
-    color: var(--color1);
-
+    color: var(--color3);
+    text-shadow: -2px -2px 4px var(--color5);
+    
 }
 
-.section-two .contactForm .textBox .infoContact p {
-    color: var(--color1);
+.section-two .contactForm .info .social-media a{
+    color: inherit;
+    
+    transition: scale(5%) 2s
+    
+}
+
+.section-two .contactForm .info .social-media a:hover{
+    color: var(--color2);
+    ;
 }
 
 /*Footer*/
@@ -599,22 +626,27 @@ header .btn{
         width: 100%;
         height: auto;}
     
-    .section-two{
-        height: 150vh
+        .section-two .contactForm{
+            width: 85%;
+            padding: 0;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
         }
         
-    
-        .section-two .contactForm{
-        width: 70%;
-        padding: 0;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
-    }
-    .section-two .contactForm .info{
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
+        .section-two .contactForm .form{
+            margin-top: -15%;
+        }
+        .section-two .contactForm .info{
+            margin-top: 20%;
+            
+        }
+        
+        .section-two .contactForm .info .numero{
+            margin-top: 0.2em;
+            margin-bottom: 0.5em;
+            font-size: 3.8em;
+        }
         .footer .grupo-1{
         width: 90%;
         grid-template-columns: repeat(1,1fr);
@@ -623,28 +655,25 @@ header .btn{
     }
           
     
-    }
-    
-      
-    
-    
-    
+    }    
     /*Lapotops y tablets*/
     
     @media only screen and (max-width:768px){
         .section-two .contactForm .info{
-            height: 100px;
+            margin-top: -10%;
+            height: 20vh;
             margin-left: 50px;
             
-            
+        }
+    
+        .section-two .contactForm .info .numero{
+            font-size: 4em;
         }
 
         .service{
-            height: 80vh;
+            height: 100vh;
         }
-        .section-two .contactForm .info .imgBox{
-            display: none;
-        }
+       
     }
     /*Celulares*/
     
@@ -660,10 +689,44 @@ header .btn{
 
         .titulo h1{
             padding-top: 25%;
+            text-align: center;
+        }
+
+        .service .content{
+            margin-top: 10%;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .service .content p{
+            margin: 0 auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        .section-two{
+            height: 180vh;
         }
     
         .section-two .contactForm {
             margin-left: 0px;
             width: 100%;
+        }
+    
+        .section-two .contactForm .form{
+            margin-top: -20%;
+        }
+    
+        .section-two .contactForm .info{
+            margin-top: -25%;
+        }
+    
+        .section-two .contactForm .info .numero{
+            font-size: 2em;
+            margin-bottom: 0.5em;
+    
+        }
+        .section-two .contactForm .info .social-media{
+            font-size: 2.5em;
         }
     }

@@ -112,8 +112,10 @@ header .btn{
 /*Section main*/
 
 .titulo{
-    background-image: url("/img/como-instalar-un-equipo-de-sonido-profesional.jpg");
-    width: 100%;
+    background-image: url("/img/mejores-fondos-de-pantalla.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;    width: 100%;
     height: 20vh;
     justify-content: right;
     margin-bottom: none;
@@ -327,31 +329,45 @@ a{
     object-fit: cover;
 }
 
-.section-two .contactForm .textBox {
-   
+.section-two .contactForm .info {
+    margin-top: 15%;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    display:flex;
 }
 
-.section-two .contactForm .textBox .infoContact {
-    display: flex;
+.section-two .contactForm .info .llamanos {
     justify-content: center;
     align-items: flex-start;
-    margin-top: 10px; 
-    margin-bottom: 10px;   
+    margin-top: 5%; 
+    margin-bottom: 5%;   
 }
 
-.section-two .contactForm .textBox .infoContact svg{
-    font-size: 2em;
+.section-two .contactForm .info .numero{
+    font-size: 5em;
+    font-weight: bold;
+    color: var(--color3);
+    text-shadow:2px 2px 4px var(--color5)
+    
+}
+
+.section-two .contactForm .info .social-media{
+    font-size: 5em;
+    float: left;
     margin-right: 10px;
-    color: var(--color1);
-
+    color: var(--color3);
+    text-shadow: -2px -2px 4px var(--color5);
+    
 }
 
-.section-two .contactForm .textBox .infoContact p {
-    color: var(--color1);
+.section-two .contactForm .info .social-media a{
+    color: inherit;
+    
+    transition: scale(5%) 2s
+    
+}
+
+.section-two .contactForm .info .social-media a:hover{
+    color: var(--color2);
+    ;
 }
 
 /*Footer*/
@@ -550,17 +566,32 @@ a{
 
         .titulo h1{
             padding-top: 25%;
+            text-align: center;
         }
         
         .section-two{
-            height: 140vh;
+            height: 180vh;
         }
+    
         .section-two .contactForm {
-            height: 120vh;
             margin-left: 0px;
             width: 100%;
         }
-        .section-two .contactForm .info {
-            display: none;
+    
+        .section-two .contactForm .form{
+            margin-top: -20%;
+        }
+    
+        .section-two .contactForm .info{
+            margin-top: -25%;
+        }
+    
+        .section-two .contactForm .info .numero{
+            font-size: 2em;
+            margin-bottom: 0.5em;
+    
+        }
+        .section-two .contactForm .info .social-media{
+            font-size: 2.5em;
         }
     }
