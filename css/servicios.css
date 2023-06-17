@@ -79,7 +79,7 @@ header .logo{
 
 header .brand img{
     height: 60px;
-    width: 230px;
+    width: 150px;
     transition: 0.3s;
 
 }
@@ -622,36 +622,48 @@ header .btn{
         padding: 0 15px;
     }
     
-      nav, article {
-        width: 100%;
-        height: auto;}
+    nav, article {
+    width: 100%;
+    height: auto;
+    }
+
+    .service .content{
+        margin-top: -5%;
+        text-align: center;
+        justify-content: center;
+    }
+    .service .content p{
+        width: 60%;
+        height: 50%;
+        margin-left: 20%;
+    }
     
-        .section-two .contactForm{
-            width: 85%;
-            padding: 0;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
-        }
+    .section-two .contactForm{
+        width: 85%;
+        padding: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
+    }
+    
+    .section-two .contactForm .form{
+        margin-top: -15%;
+    }
+    .section-two .contactForm .info{
+        margin-top: 20%;
         
-        .section-two .contactForm .form{
-            margin-top: -15%;
-        }
-        .section-two .contactForm .info{
-            margin-top: 20%;
-            
-        }
-        
-        .section-two .contactForm .info .numero{
-            margin-top: 0.2em;
-            margin-bottom: 0.5em;
-            font-size: 3.8em;
-        }
-        .footer .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1,1fr);
-        grid-gap: 30px;
-        padding: 35px 0px;
+    }
+    
+    .section-two .contactForm .info .numero{
+        margin-top: 0.2em;
+        margin-bottom: 0.5em;
+        font-size: 3.8em;
+    }
+    .footer .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
     }
           
     
@@ -659,11 +671,18 @@ header .btn{
     /*Lapotops y tablets*/
     
     @media only screen and (max-width:768px){
+        
+        .service .content{
+            margin-top: 5%;
+        }
+        .service .content p{
+            width: 70%;
+            margin-left: 15%;
+        }
         .section-two .contactForm .info{
             margin-top: -10%;
             height: 20vh;
             margin-left: 50px;
-            
         }
     
         .section-two .contactForm .info .numero{
@@ -730,3 +749,63 @@ header .btn{
             font-size: 2.5em;
         }
     }
+
+    @media (max-width:375px){
+        .section-two {
+            height: 170vh;
+            padding-top: -50%;
+        }
+        .section-two .contactForm{
+            height: 150vh;
+            margin-top: 20%;
+        }
+    
+        .section-two .contactForm .form{
+            margin-top: 0%;
+        }
+    }
+
+    @media (max-width:280px){.is-invalid{
+        width: 70%;
+        text-align:justify;
+    }
+    .section-two{
+        width: 100%;
+        height: 160vh;
+    }
+    .section-two .contactForm{
+        width: 80%;
+        height: 150vh;
+        margin: 0 auto;
+        margin-left: -3px;
+    }
+    .section-two .contactForm .form .texto h2{
+        font-size: 1.5em;
+    }
+    .section-two .contactForm .form .texto p{
+        width: 70%;
+        font-size: 0.8em;
+    }
+    .section-two .contactForm .form form .inputBox input[type="text"],
+    .section-two .contactForm .form form .inputBox input[type="email"],
+    .section-two .contactForm .form form .inputBox input[type="tel"],
+    .section-two .contactForm .form form .inputBox textarea{
+        width: 70%;
+
+    }
+
+    .section-two .contactForm .form form  input[type="submit"]{
+    width: 70%;
+    }
+    .section-two .contactForm .info{
+        margin: 0 auto;
+        margin-top: -15%;
+        margin-left:20px ;
+    }
+    .section-two .contactForm .info h2{
+        font-size: 0.8em;
+    }
+    .section-two .contactForm .info .numero{
+        font-size: 1.5em;
+    }
+}

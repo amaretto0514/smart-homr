@@ -53,7 +53,7 @@ header .logo{
 
 header .brand img{
     height: 60px;
-    width: 230px;
+    width: 150px;
     transition: 0.3s;
 
 }
@@ -145,9 +145,10 @@ header .btn{
 
 .main .gallery .box{
     align-items: center;
-    margin: 10px 20px;
+    margin-left: 2%;
+    margin-bottom: 2%;
     float: left;
-    width: 350px;
+    width: 30%;
 }
 
 .main .gallery img{
@@ -301,26 +302,6 @@ a{
     color: var(--color2);
 }
 
-.section-two .contactForm .imgBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    position: relative;
-    width: 500px;
-    height: 400px;
-}
-
-.section-two .contactForm .imgBox img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .section-two .contactForm .info {
     margin-top: 15%;
     justify-content: center;
@@ -465,7 +446,7 @@ a{
     text-align: right;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
 
     header, header.down{
         padding: 20px 40px;
@@ -510,44 +491,65 @@ a{
     
       nav, article {
         width: 100%;
-        height: auto;}
-      
-        .section-two .contactForm{
-            width: 85%;
-            padding: 0;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
-        }
-        
-        .section-two .contactForm .form{
-            margin-top: -15%;
-        }
-        .section-two .contactForm .info{
-            margin-top: 20%;
-            
-        }
-        
-        .section-two .contactForm .info .numero{
-            margin-top: 0.2em;
-            margin-bottom: 0.5em;
-            font-size: 3.8em;
-        }
+        height: auto;
+    }
     
-        .footer .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1,1fr);
-        grid-gap: 30px;
-        padding: 35px 0px;
+    .main .gallery .box{
+        margin-left: 3%;
+    }
+    .main .gallery .box h2{
+        font-size: 1em;
+    }
+      
+    .section-two .contactForm{
+        width: 85%;
+        padding: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
+    }
+    
+    .section-two .contactForm .form{
+        margin-top: -15%;
+    }
+    .section-two .contactForm .info{
+        margin-top: 20%;
+        
+    }
+    
+    .section-two .contactForm .info .numero{
+        margin-top: 0.2em;
+        margin-bottom: 0.5em;
+        font-size: 3.3em;
+    }
+    .footer .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
     }
     }
  
     /*Lapotops y tablets*/
     
     @media only screen and (max-width:768px){
+        
+        .main .gallery .box{
+            margin-left: 3%;
+            width: 30%;
+        }
+        .main .gallery .box h2{
+            font-size: 0.6em;
+        }
+        .section-two{
+            height: 170vh;
+        }
+        .section-two .contactForm{
+            height: 150vh ;
+        }
         .section-two .contactForm .info{
-            margin-top: -10%;
-            height: 20vh;
+            margin-top: -15%;
+            height: 30vh;
             margin-left: 50px;
             
         }
@@ -559,33 +561,28 @@ a{
     /*Celulares*/
     
     @media (max-width:600px){
-        .section-main{
-            font-size: 50px;
-            line-height: 60px;
+        .main .gallery .box{
+            width: 100%;
+            margin-left: 0%;
+            margin-bottom: 10%;
         }
-
-        .titulo h1{
-            padding-top: 25%;
-            text-align: center;
+        .main .gallery .box h2{
+            font-size: 1em;
         }
-        
+        .main .gallery .box img{
+            width: 100%;
+        }
         .section-two{
-            height: 180vh;
+            height: 150vh;
         }
     
         .section-two .contactForm {
             margin-left: 0px;
+            padding-top: 10%;
             width: 100%;
+            height: 145vh;
         }
-    
-        .section-two .contactForm .form{
-            margin-top: -20%;
-        }
-    
-        .section-two .contactForm .info{
-            margin-top: -25%;
-        }
-    
+
         .section-two .contactForm .info .numero{
             font-size: 2em;
             margin-bottom: 0.5em;
@@ -593,5 +590,94 @@ a{
         }
         .section-two .contactForm .info .social-media{
             font-size: 2.5em;
+        }
+    }
+    @media (max-width:375px){
+        .main{
+            padding: -50%;
+        }
+        .main .gallery .box{
+            width: 100%;  
+            margin-left: -20%;
+        }
+        .main .box img{
+            width: 100%;
+        }
+        .section-two {
+            height: 170vh;
+            padding-top: -50%;
+        }
+        .section-two .contactForm{
+            height: 150vh;
+            margin-top: 20%;
+        }
+    
+        .section-two .contactForm .form{
+            margin-top: 0%;
+        }
+    }
+    
+    @media (max-width:280px){
+        .main{
+            padding: 10%;
+        }
+        .main .gallery .box{
+            width: 100%;
+            margin: 0 auto;
+            margin-left: 1%;
+        }
+        
+        .main .gallery .box img{
+            width: 100%;
+        }
+        .main .gallery .box h2{
+            font-size: 1em;
+            text-align: center;
+            margin-bottom: 10%;
+            margin-top: -3%;
+        }
+        .is-invalid{
+            width: 70%;
+            text-align:justify;
+        }
+        .section-two{
+            width: 100%;
+            height: 180vh;
+        }
+        .section-two .contactForm{
+            width: 80%;
+            height: 150vh;
+            margin: 0 auto;
+            padding-top: 15%;
+            margin-left: -3px;
+        }
+        .section-two .contactForm .form .texto h2{
+            font-size: 1.5em;
+        }
+        .section-two .contactForm .form .texto p{
+            width: 70%;
+            font-size: 0.8em;
+        }
+        .section-two .contactForm .form form .inputBox input[type="text"],
+        .section-two .contactForm .form form .inputBox input[type="email"],
+        .section-two .contactForm .form form .inputBox input[type="tel"],
+        .section-two .contactForm .form form .inputBox textarea{
+            width: 70%;
+    
+        }
+    
+        .section-two .contactForm .form form  input[type="submit"]{
+        width: 70%;
+        }
+        .section-two .contactForm .info{
+            margin: 0 auto;
+            margin-top: -15%;
+            margin-left:20px ;
+        }
+        .section-two .contactForm .info h2{
+            font-size: 0.8em;
+        }
+        .section-two .contactForm .info .numero{
+            font-size: 1.5em;
         }
     }
