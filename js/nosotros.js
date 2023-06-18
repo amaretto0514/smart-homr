@@ -23,6 +23,22 @@ closeBtn.addEventListener("click",() =>{
     menu.classList.remove('activate');
 })
 
+// cmabiar texto main
+
+window.onload = function() {
+    var texto = document.getElementById('texto');
+    var textos = ['Años haciendo tu vida segura y confortable', 'Diseñamos tu hogar & oficina SMART']; // Aquí puedes agregar los textos que desees
+  
+    var index = 0;
+    texto.innerHTML = textos[index];
+  
+    setInterval(function() {
+      index = (index + 1) % textos.length;
+      texto.innerHTML = textos[index];
+    }, 30000); // 10000 milisegundos = 10 segundos
+  };
+
+
 //validacion sin formualario
 
 const nombre = document.getElementById("name");

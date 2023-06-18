@@ -127,17 +127,16 @@ header .btn{
 
 
 .section-main .titulo{
-    width: 100%;
-    margin: 0px;
-    margin-top: 300px;
-    margin-left: -7%;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.449);
+    margin-top: 30%;
+    margin-left: 0%;
 }
 
 .section-main h1{
     font-family: var(--fuente);
     font-size: 4em;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.449);
     padding-top: 5%;
     padding-bottom: 5%;
     padding-left: 2%;
@@ -149,7 +148,7 @@ header .btn{
 /*Services*/
  .services{
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     position: relative;
     justify-content: center;
     text-align: center;
@@ -186,6 +185,7 @@ header .btn{
     opacity: 0;
     display: flex;
     float: left;
+    overflow: hidden;
     justify-content: center;
     margin-left: 1.8%;
     margin-right: 0.7%;
@@ -193,21 +193,20 @@ header .btn{
     width: 30%;
     height: 65%;
  }
-
  .services .box:last-child {
     margin-left: 34.7%;
 }
 
-
  .services .box a{
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     font-style: none;
  }
 
  .services .box img{
-    image-resolution: cover;
     width: 100%;
-    height: 75%;
+    height: 324px;
  }
 
  .services .box h2{
@@ -273,7 +272,7 @@ header .btn{
 .section-two{
     position: relative;
     width: 100%;
-    height: 120vh;
+    height: fit-content;
     display: grid;
     place-items: center;
     padding: 20px;
@@ -286,12 +285,78 @@ header .btn{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px;
-    padding: 40px;
+    padding: 5%;
     width: 90%;
-    height: 90%;
+    height: fit-content;
     background-color: var(--color4);
     box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.59);
     border-radius: 30px;
+}
+
+
+
+.section-two .contactForm .form{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 85%;
+    height: fit-content;
+    margin-left: 10%;
+}
+
+.section-two .contactForm .form form{
+    width: 100%;
+    height: 100%;
+}
+
+.section-two .contactForm .form .texto h2{
+    color: var(--color1);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+
+}
+
+.section-two .contactForm .form .texto p{
+    color: var(--color2);
+    text-align: justify;
+    -webkit-text-stroke: 0.6px var(--color5);
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.section-two .contactForm .form form .inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.section-two .contactForm .form form .inputBox label{
+    color: var(--color1);
+    width: 100%;
+    text-align: left;
+    font-weight: 700;
+}
+
+.section-two .contactForm .form form .inputBox input[type="text"],
+.section-two .contactForm .form form .inputBox input[type="email"],
+.section-two .contactForm .form form .inputBox input[type="tel"],
+.section-two .contactForm .form form .inputBox textarea{
+    border: none;
+    width: 90%;
+    height: 10%;
+    background: #6a665a;
+    padding: 10px;
+    border-radius: 15px;
+    color: var(--color1);
+}
+
+.section-two .contactForm .form form .inputBox input[type="text"]:focus,
+.section-two .contactForm .form form .inputBox input[type="email"]:focus,
+.section-two .contactForm .form form .inputBox input[type="tel"]:focus,
+.section-two .contactForm .form form .inputBox textarea:focus{
+    outline: 2px solid var(--color1);
 }
 
 .form-termsAndCond [type="checkbox"]{
@@ -319,64 +384,6 @@ header .btn{
     left: -14px;
 }
 
-.section-two .contactForm .form{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 85%;
-    margin-left: 30px;
-}
-
-.section-two .contactForm .form form{
-    width: 100%;
-}
-
-.section-two .contactForm .form .texto h2{
-    color: var(--color1);
-    font-size: 2em;
-    margin-bottom: 10px;
-
-}
-
-.section-two .contactForm .form .texto p{
-    color: var(--color2);
-    text-align: justify;
-    -webkit-text-stroke: 0.6px var(--color5);
-    font-size: 1.5;
-    margin-bottom: 20px;
-}
-
-.section-two .contactForm .form form .inputBox{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-}
-
-.section-two .contactForm .form form .inputBox label{
-    color: var(--color1);
-    font-weight: 700;
-}
-
-.section-two .contactForm .form form .inputBox input[type="text"],
-.section-two .contactForm .form form .inputBox input[type="email"],
-.section-two .contactForm .form form .inputBox input[type="tel"],
-.section-two .contactForm .form form .inputBox textarea{
-    border: none;
-    background: #6a665a;
-    padding: 10px;
-    border-radius: 15px;
-    color: var(--color1);
-}
-
-.section-two .contactForm .form form .inputBox input[type="text"]:focus,
-.section-two .contactForm .form form .inputBox input[type="email"]:focus,
-.section-two .contactForm .form form .inputBox input[type="tel"]:focus,
-.section-two .contactForm .form form .inputBox textarea:focus{
-    outline: 2px solid var(--color1);
-}
-
 .section-two .contactForm .form form  input[type="submit"]{
     background: var(--color1);
     color: var(--color4);
@@ -397,34 +404,21 @@ header .btn{
     color: var(--color2);
 }
 
-.section-two .contactForm .imgBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.form-termsAndCond a{
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
 
-    position: relative;
-    width: 500px;
-    height: 400px;
 }
-
-.section-two .contactForm .imgBox img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .section-two .contactForm .info {
-    margin-top: 15%;
-    justify-content: center;
+    width: 70%;
+    padding: auto;
+    height: fit-content;
 }
 
 .section-two .contactForm .info .llamanos {
+    display: flex;
     justify-content: center;
-    align-items: flex-start;
     margin-top: 5%; 
     margin-bottom: 5%;   
 }
@@ -432,6 +426,7 @@ header .btn{
 .section-two .contactForm .info .numero{
     font-size: 5em;
     font-weight: bold;
+    width: 100%;
     color: var(--color3);
     text-shadow:2px 2px 4px var(--color5)
     
@@ -448,14 +443,16 @@ header .btn{
 
 .section-two .contactForm .info .social-media a{
     color: inherit;
-    
     transition: scale(5%) 2s
-    
 }
 
 .section-two .contactForm .info .social-media a:hover{
     color: var(--color2);
     ;
+}
+.footer .grupo-2 .autor{
+    font-size: 10px;
+    text-align: right;
 }
 
 /*Footer*/
@@ -608,29 +605,21 @@ header .menu a{
     padding: 0 15px;
 }
 
-  nav, article {
+nav, article {
     width: 100%;
     height: auto;
   }
-  .section-two{
-    height: 150vh
-  }
-  
-  .section-main{
-    width: 100%;
-    height: 50vh
-  }
+
   .section-main .titulo{
+    box-sizing:  border-box; 
     width: 100%;
-    margin: none;
-    padding: none
-  }
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.449);
+    margin: 0;
+    margin-top: 20%;
+}
 
-  .section-main .titulo h1{
-   font-size: 2em;
-  }
-
-  .services .box{
+.services .box{
     width: 300px;
     height: 325px;
     margin-left: 5%;
@@ -646,28 +635,29 @@ header .menu a{
   .services .box:last-child {
     margin-left: 5%;
   }
-
-  .section-two .contactForm{
-    width: 85%;
-    padding: 0;
+.section-two{
+    width: 100%;
+    height: fit-content;
+    }
+.section-two .contactForm{
+    width: 90%;
+    height: fit-content;
     margin-top: 10px;
     margin-bottom: 10px;
     grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
 }
 
-.section-two .contactForm .form{
-    margin-top: -15%;
-}
-.section-two .contactForm .info{
-    margin-top: 20%;
-    
+.section-two .contactForm .form p{
+    width: 70%;
+    margin-bottom: -3%;
 }
 
 .section-two .contactForm .info .numero{
     margin-top: 0.2em;
+    width: 70%;
     margin-bottom: 0.5em;
     font-size: 3.3em;
-}
+} 
   .footer .grupo-1{
     width: 90%;
     grid-template-columns: repeat(1,1fr);
@@ -681,18 +671,36 @@ header .menu a{
 /*Lapotops y tablets*/
 
 @media only screen and (max-width:768px){
+    .section-main{
+        width: 100%;
+    }
+    .section-main .titulo{
+        box-sizing:  border-box; 
+        width:100%;      
+        margin: 0% auto;
+        margin-top: 20%;
+    
+    }
+
+    .section-main .titulo h1{
+        text-align: center;
+        font-size: 4em;
+    }
+    
     .section-two{
-        height: 180vh;
+        height: fit-content;
     }
     .section-two .contactForm{
         margin-top: 10%;
-        height: 150vh ;
+        height: fit-content;
     }
     .section-two .contactForm .info{
-        margin-top: -15%;
-        height: 30vh;
-        margin-left: 50px;
-        
+        width: 100%;
+        height: fit-content;
+    }
+
+    .section-two .contactForm .info .numero{
+        font-size: 4em;
     }
 
     .section-two .contactForm .info .numero{
@@ -707,38 +715,27 @@ header .menu a{
         margin: 0px;
         padding: 0px;
     }
-
-    .section-main .titulo{
-        box-sizing:  border-box; 
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.449);
-        margin: 0;
-    margin-top: 150px;
-    margin-left: 0;
-    }
-
     .section-main .titulo h1{
+        font-size: 3em;
         box-sizing:  border-box;
         text-align: center;
-        
-        background-color: none
-        ;
+        background-color: none;
     }
     .section-two{
-        height: 180vh;
+        height: fit-content;
     }
 
     .section-two .contactForm {
         margin-left: 0px;
         width: 100%;
+        height: fit-content;
     }
-
-    .section-two .contactForm .form{
-        margin-top: -20%;
-    }
-
     .section-two .contactForm .info{
-        margin-top: -25%;
+        width: 70%;
+        
+    }
+    .section-two .contactForm .info h2{
+        font-size: 1em;
     }
 
     .section-two .contactForm .info .numero{
@@ -751,6 +748,9 @@ header .menu a{
     }
 }
 @media (max-width:375px){
+    .section-main .titulo h1{
+        font-size: 2em;
+    }
     .services .box{
         width: 80%;
         margin-left: 5%;
@@ -762,17 +762,49 @@ header .menu a{
         width: 100%;
     }
     .section-two {
-        height: 170vh;
-        padding-top: -50%;
+        width: 100%;
+        height: fit-content;
     }
     .section-two .contactForm{
-        height: 150vh;
+        width: 80%;
+        height: fit-content;
         margin-top: 20%;
     }
 
-    .section-two .contactForm .form{
-        margin-top: 0%;
+    .section-two .contactForm .form .texto h2{
+        font-size: 1.5em;
     }
+    .section-two .contactForm .form .texto p{
+        width: 70%;
+        height: fit-content;
+        font-size: 0.8em;
+    }
+    .section-two .contactForm .form{
+        width: 70%;
+        
+    }
+    .section-two .contactForm .info{
+        width: 70%;
+    }
+    .section-two .contactForm .info h2{
+        font-size: 1em;
+    }
+    .section-two .contactForm .info .numero{
+        font-size: 1.8em;
+    }
+   
+    .section-two .contactForm .form form .inputBox input[type="text"],
+    .section-two .contactForm .form form .inputBox input[type="email"],
+    .section-two .contactForm .form form .inputBox input[type="tel"],
+    .section-two .contactForm .form form .inputBox textarea{
+        width: 70%;
+    }
+
+    .section-two .contactForm .form form  input[type="submit"]{
+    width: 70%;
+    }
+    
+
 }
 
 @media (max-width:280px){
@@ -799,42 +831,16 @@ header .menu a{
     }
     .section-two{
         width: 100%;
-        height: 180vh;
+        height: fit-content;
     }
     .section-two .contactForm{
         width: 80%;
-        height: 150vh;
+        height: fit-content;
         margin: 0 auto;
         padding-top: 15%;
         margin-left: -3px;
     }
-    .section-two .contactForm .form .texto h2{
-        font-size: 1.5em;
-    }
-    .section-two .contactForm .form .texto p{
-        width: 70%;
-        font-size: 0.8em;
-    }
-    .section-two .contactForm .form form .inputBox input[type="text"],
-    .section-two .contactForm .form form .inputBox input[type="email"],
-    .section-two .contactForm .form form .inputBox input[type="tel"],
-    .section-two .contactForm .form form .inputBox textarea{
-        width: 70%;
-
-    }
-
-    .section-two .contactForm .form form  input[type="submit"]{
-    width: 70%;
-    }
     .section-two .contactForm .info{
-        margin: 0 auto;
-        margin-top: -15%;
-        margin-left:20px ;
-    }
-    .section-two .contactForm .info h2{
-        font-size: 0.8em;
-    }
-    .section-two .contactForm .info .numero{
-        font-size: 1.5em;
+        width: 70%;
     }
 }
