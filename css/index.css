@@ -122,7 +122,7 @@ header .btn{
     display: flex;
     justify-content: left;
     align-items: center;
-    padding: 20px 80px;
+    /*padding: 20}}px 80px;*/
 }
 
 
@@ -189,7 +189,8 @@ header .btn{
     justify-content: center;
     margin-left: 1.8%;
     margin-right: 0.7%;
-    padding: 0px;
+    padding: 1%;
+    padding-bottom: 5%;
     width: 30%;
     height: 65%;
  }
@@ -620,21 +621,19 @@ nav, article {
 }
 
 .services .box{
-    width: 300px;
-    height: 325px;
-    margin-left: 5%;
-
+    width: 30%;
+    height: 50%;
   }
-
-  .services .box img{
-    width: 300px;
-    height: 245px;
-    margin-left: 5%;
-  }
-
   .services .box:last-child {
-    margin-left: 5%;
+    height: 30%;
+    margin-left: 34%;
   }
+  .services .box img{
+    width: 100%;
+    height: 250px;
+}
+
+  
 .section-two{
     width: 100%;
     height: fit-content;
@@ -686,6 +685,20 @@ nav, article {
         text-align: center;
         font-size: 4em;
     }
+
+    .services .box{
+        width: 30%;
+        height: 40%;
+      }
+      .services .box:last-child {
+        height: 30%;
+        margin-left: 34%;
+      }
+
+    .services .box img{
+        width: 100%;
+        height: 225px;
+    }
     
     .section-two{
         height: fit-content;
@@ -710,6 +723,24 @@ nav, article {
 /*Celulares*/
 
 @media (max-width:600px){
+    .services .box{
+        width: 80%;
+        margin: 10%;
+        margin-bottom: -2.5%;
+    }
+
+    .services .box:last-child {
+        margin-left: 10%;
+    }
+    
+    .services .box img{
+        width: 100%;
+    }
+    .services .box h2{
+        font-size: 1.3em;
+        text-align: center;
+        
+    }
     .section-main{
         width: 100%;
         margin: 0px;
@@ -751,16 +782,7 @@ nav, article {
     .section-main .titulo h1{
         font-size: 2em;
     }
-    .services .box{
-        width: 80%;
-        margin-left: 5%;
-    }
-    .services .box:last-child {
-        margin-left: 5%;
-    }
-    .services .box img{
-        width: 100%;
-    }
+    
     .section-two {
         width: 100%;
         height: fit-content;
